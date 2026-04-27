@@ -8,7 +8,7 @@
  */
 function initializeGame() {
     menuScreen(); 
-    console.log("Game initalized.")
+    console.log("Game initalized."); 
 }
 
 /**
@@ -16,5 +16,5 @@ function initializeGame() {
  */
 function menuScreen() {
     createScreen(); 
-    renderScreen(); 
+    renderScreen([['o','o'],['o','o']]); 
 }

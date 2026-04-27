@@ -3,43 +3,38 @@
  */
 
 const screenElement = document.getElementById('screen'); 
-let renderedState = null; 
-
-const rows = 20;
-const cols = 30;
-
+const renderedScreen = []; 
 
 /**
  *  Initiallize rows x cols screen
  */
 function createScreen() {
     screenElement.innerHTML = ''; // Clear screen element in case anything is in there
-    renderedState = null; // Screen is new
-    for (let rowNum = 0; rowNum < rows; rowNum++) {
-        const row = document.createElement('div'); 
-        row.id = "row"+String(rowNum); 
-        for (let col = 0; col < cols; col++) {
-            const char = document.createElement('span');
-            char.row = rowNum; 
-            char.col = col;
-            char.id = "col"+String(col);
-            char.classList.add('char');
-            row.appendChild(char); 
-        }
-        screenElement.appendChild(row);
-    }
 }
 
 /**
- * @function renderscreen
- * @description Render the whole screen given a 2D array
- * @param screenState
+ * @function renderScreen
+ * @description Turns a 2D array into a string and displays it in the screen
+ * @param screenData A 2D array containing what is to be rendered
  */
-function renderscreen(screenState) {
-    for (let rowNum = 0; rowNum < rows; rowNum++) {
-        const row
-        for (let col = 0; col < cols; col++) {
-            const char = document.getElementById("row"+String(row)); 
+function renderScreen(screenData) {
+    render = ''; 
+    for(let i = 0; i < screenData.length; i++) {
+        rowRender = ''; 
+        for(let j = 0; j < screenData[0].length; j++) {
+            rowRender += screenData[i][j]; 
         }
+        render += rowRender+'<br>'; 
     }
+    screenElement.innerHTML = render; 
+    const renderedScreen = screenData; 
+}
+
+/**
+ * @function getScreen
+ * @description A function that returns the 2D array of the current rendered screen
+ * @returns 2D array of rendered screen
+ */
+function getScreen() {
+    return renderedScreen; 
 }
