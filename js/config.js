@@ -19,3 +19,12 @@ config = {
         DESTROY: "assets/sounds/destroy.mp3"
     }
 }
+
+levels = {
+    // menu level
+    menu: {
+        xaxis: 10,
+        yaxis: 6, 
+        pieces: [['o', 'piece', 2, 2], ['1', 'piece', 4, 4], ["Yo Buddy", "text", 0, 0]]
+    }
+}

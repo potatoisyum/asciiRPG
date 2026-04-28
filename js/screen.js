@@ -18,13 +18,13 @@ function createScreen() {
  * @param screenData A 2D array containing what is to be rendered
  */
 function renderScreen(screenData) {
-    render = ''; 
+    render = ``; 
     for(let i = 0; i < screenData.length; i++) {
-        rowRender = ''; 
+        rowRender = ``; 
         for(let j = 0; j < screenData[0].length; j++) {
             rowRender += screenData[i][j]; 
         }
-        render += rowRender+'<br>'; 
+        render += rowRender+`\n`; 
     }
     screenElement.innerHTML = render; 
     const renderedScreen = screenData; 
