@@ -20,5 +20,7 @@ function initializeGame() {
 function getLevel(level) {
     const rawLevelData = config[level] 
     var levelData = Array(config[level]['yaxis'])
-    
+    for (let i = 0; i < levelData.length; i++) {
+        
+    }
 }
