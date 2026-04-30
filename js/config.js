@@ -26,5 +26,8 @@ levels = {
         xaxis: 10,
         yaxis: 6, 
         pieces: [['o', 'piece', 2, 2], ['1', 'piece', 4, 4], ["Yo Buddy", "text", 0, 0]]
+    },
+    level1: {
+
     }
 }
